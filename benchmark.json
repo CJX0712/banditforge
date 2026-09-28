@@ -1,0 +1,740 @@
+{
+  "version": "0.1.0",
+  "seed": 20260928,
+  "datasets": [
+    {
+      "name": "lin-K5-d10-high",
+      "num_actions": 5,
+      "context_dim": 10,
+      "overlap": "high",
+      "n_log": 2000,
+      "logging_temp": 8.0,
+      "reward_noise": 0.5,
+      "true_value": 2.03347
+    },
+    {
+      "name": "lin-K5-d10-medium",
+      "num_actions": 5,
+      "context_dim": 10,
+      "overlap": "medium",
+      "n_log": 2000,
+      "logging_temp": 2.0,
+      "reward_noise": 0.5,
+      "true_value": 2.03347
+    },
+    {
+      "name": "lin-K5-d10-low",
+      "num_actions": 5,
+      "context_dim": 10,
+      "overlap": "low",
+      "n_log": 2000,
+      "logging_temp": 0.6,
+      "reward_noise": 0.5,
+      "true_value": 2.03347
+    },
+    {
+      "name": "lin-K10-d10-medium",
+      "num_actions": 10,
+      "context_dim": 10,
+      "overlap": "medium",
+      "n_log": 2000,
+      "logging_temp": 2.0,
+      "reward_noise": 0.5,
+      "true_value": 2.652328
+    }
+  ],
+  "policy_benchmark": [
+    {
+      "policy": "eps_greedy",
+      "regret_mean": 319.4734,
+      "regret_std": 26.5968,
+      "seed_values": [
+        291.5719,
+        322.3103,
+        344.5381
+      ]
+    },
+    {
+      "policy": "linucb",
+      "regret_mean": 180.5623,
+      "regret_std": 7.4334,
+      "seed_values": [
+        172.9156,
+        181.009,
+        187.7623
+      ]
+    },
+    {
+      "policy": "lints",
+      "regret_mean": 234.0797,
+      "regret_std": 39.7375,
+      "seed_values": [
+        192.7672,
+        237.4438,
+        272.0282
+      ]
+    },
+    {
+      "policy": "ucb1",
+      "regret_mean": 6311.836,
+      "regret_std": 35.0789,
+      "seed_values": [
+        6323.5584,
+        6272.397,
+        6339.5526
+      ]
+    }
+  ],
+  "ope_benchmark": [
+    {
+      "estimator": "ips",
+      "dataset": "lin-K5-d10-high",
+      "rmse_mean": 0.131823,
+      "rmse_std": 0.021504,
+      "bias_mean": 0.005601,
+      "seed_values": [
+        0.109944,
+        0.152932,
+        0.132593
+      ]
+    },
+    {
+      "estimator": "snips",
+      "dataset": "lin-K5-d10-high",
+      "rmse_mean": 0.080146,
+      "rmse_std": 0.012318,
+      "bias_mean": 0.003013,
+      "seed_values": [
+        0.066316,
+        0.084181,
+        0.089939
+      ]
+    },
+    {
+      "estimator": "dm",
+      "dataset": "lin-K5-d10-high",
+      "rmse_mean": 0.040292,
+      "rmse_std": 0.002721,
+      "bias_mean": 0.009084,
+      "seed_values": [
+        0.043434,
+        0.038696,
+        0.038746
+      ]
+    },
+    {
+      "estimator": "dr",
+      "dataset": "lin-K5-d10-high",
+      "rmse_mean": 0.045433,
+      "rmse_std": 0.013955,
+      "bias_mean": 0.002781,
+      "seed_values": [
+        0.061281,
+        0.034988,
+        0.04003
+      ]
+    },
+    {
+      "estimator": "dr20",
+      "dataset": "lin-K5-d10-high",
+      "rmse_mean": 0.045433,
+      "rmse_std": 0.013955,
+      "bias_mean": 0.002781,
+      "seed_values": [
+        0.061281,
+        0.034988,
+        0.04003
+      ]
+    },
+    {
+      "estimator": "cfdrac",
+      "dataset": "lin-K5-d10-high",
+      "rmse_mean": 0.045433,
+      "rmse_std": 0.013955,
+      "bias_mean": 0.002781,
+      "seed_values": [
+        0.061281,
+        0.034988,
+        0.04003
+      ]
+    },
+    {
+      "estimator": "gated",
+      "dataset": "lin-K5-d10-high",
+      "rmse_mean": 0.080146,
+      "rmse_std": 0.012318,
+      "bias_mean": 0.003013,
+      "seed_values": [
+        0.066316,
+        0.084181,
+        0.089939
+      ]
+    },
+    {
+      "estimator": "ips",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.214916,
+      "rmse_std": 0.042718,
+      "bias_mean": 0.018092,
+      "seed_values": [
+        0.254702,
+        0.220276,
+        0.169771
+      ]
+    },
+    {
+      "estimator": "snips",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.136864,
+      "rmse_std": 0.021278,
+      "bias_mean": 0.006023,
+      "seed_values": [
+        0.152135,
+        0.145896,
+        0.11256
+      ]
+    },
+    {
+      "estimator": "dm",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.055961,
+      "rmse_std": 0.003383,
+      "bias_mean": 0.03962,
+      "seed_values": [
+        0.05271,
+        0.059462,
+        0.05571
+      ]
+    },
+    {
+      "estimator": "dr",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.06424,
+      "rmse_std": 0.009477,
+      "bias_mean": 0.012528,
+      "seed_values": [
+        0.068119,
+        0.071162,
+        0.053439
+      ]
+    },
+    {
+      "estimator": "dr20",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.057314,
+      "rmse_std": 0.006429,
+      "bias_mean": 0.024272,
+      "seed_values": [
+        0.05929,
+        0.062523,
+        0.05013
+      ]
+    },
+    {
+      "estimator": "cfdrac",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.057314,
+      "rmse_std": 0.006429,
+      "bias_mean": 0.024272,
+      "seed_values": [
+        0.05929,
+        0.062523,
+        0.05013
+      ]
+    },
+    {
+      "estimator": "gated",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.135963,
+      "rmse_std": 0.020308,
+      "bias_mean": 0.002366,
+      "seed_values": [
+        0.148943,
+        0.146386,
+        0.11256
+      ]
+    },
+    {
+      "estimator": "ips",
+      "dataset": "lin-K5-d10-low",
+      "rmse_mean": 2.967463,
+      "rmse_std": 1.926013,
+      "bias_mean": 0.150311,
+      "seed_values": [
+        4.424976,
+        3.693447,
+        0.783967
+      ]
+    },
+    {
+      "estimator": "snips",
+      "dataset": "lin-K5-d10-low",
+      "rmse_mean": 0.469892,
+      "rmse_std": 0.104614,
+      "bias_mean": -0.091419,
+      "seed_values": [
+        0.586087,
+        0.440396,
+        0.383193
+      ]
+    },
+    {
+      "estimator": "dm",
+      "dataset": "lin-K5-d10-low",
+      "rmse_mean": 0.069025,
+      "rmse_std": 0.004496,
+      "bias_mean": 0.056167,
+      "seed_values": [
+        0.063894,
+        0.070904,
+        0.072276
+      ]
+    },
+    {
+      "estimator": "dr",
+      "dataset": "lin-K5-d10-low",
+      "rmse_mean": 0.151804,
+      "rmse_std": 0.009644,
+      "bias_mean": 0.034103,
+      "seed_values": [
+        0.146163,
+        0.16294,
+        0.146309
+      ]
+    },
+    {
+      "estimator": "dr20",
+      "dataset": "lin-K5-d10-low",
+      "rmse_mean": 0.081259,
+      "rmse_std": 0.007007,
+      "bias_mean": 0.065672,
+      "seed_values": [
+        0.074142,
+        0.081485,
+        0.088151
+      ]
+    },
+    {
+      "estimator": "cfdrac",
+      "dataset": "lin-K5-d10-low",
+      "rmse_mean": 0.081259,
+      "rmse_std": 0.007007,
+      "bias_mean": 0.065672,
+      "seed_values": [
+        0.074142,
+        0.081485,
+        0.088151
+      ]
+    },
+    {
+      "estimator": "gated",
+      "dataset": "lin-K5-d10-low",
+      "rmse_mean": 0.080971,
+      "rmse_std": 0.006586,
+      "bias_mean": 0.063887,
+      "seed_values": [
+        0.074142,
+        0.081485,
+        0.087285
+      ]
+    },
+    {
+      "estimator": "ips",
+      "dataset": "lin-K10-d10-medium",
+      "rmse_mean": 0.287542,
+      "rmse_std": 0.013732,
+      "bias_mean": 0.007787,
+      "seed_values": [
+        0.297291,
+        0.293497,
+        0.271838
+      ]
+    },
+    {
+      "estimator": "snips",
+      "dataset": "lin-K10-d10-medium",
+      "rmse_mean": 0.13802,
+      "rmse_std": 0.021583,
+      "bias_mean": -0.009283,
+      "seed_values": [
+        0.161776,
+        0.119618,
+        0.132665
+      ]
+    },
+    {
+      "estimator": "dm",
+      "dataset": "lin-K10-d10-medium",
+      "rmse_mean": 0.042395,
+      "rmse_std": 0.01173,
+      "bias_mean": 0.010641,
+      "seed_values": [
+        0.049854,
+        0.048458,
+        0.028875
+      ]
+    },
+    {
+      "estimator": "dr",
+      "dataset": "lin-K10-d10-medium",
+      "rmse_mean": 0.090161,
+      "rmse_std": 0.025233,
+      "bias_mean": -0.005601,
+      "seed_values": [
+        0.119228,
+        0.077385,
+        0.073872
+      ]
+    },
+    {
+      "estimator": "dr20",
+      "dataset": "lin-K10-d10-medium",
+      "rmse_mean": 0.061623,
+      "rmse_std": 0.008222,
+      "bias_mean": 0.014951,
+      "seed_values": [
+        0.070521,
+        0.054308,
+        0.060039
+      ]
+    },
+    {
+      "estimator": "cfdrac",
+      "dataset": "lin-K10-d10-medium",
+      "rmse_mean": 0.061623,
+      "rmse_std": 0.008222,
+      "bias_mean": 0.014951,
+      "seed_values": [
+        0.070521,
+        0.054308,
+        0.060039
+      ]
+    },
+    {
+      "estimator": "gated",
+      "dataset": "lin-K10-d10-medium",
+      "rmse_mean": 0.124147,
+      "rmse_std": 0.007402,
+      "bias_mean": -0.001992,
+      "seed_values": [
+        0.120318,
+        0.119444,
+        0.132679
+      ]
+    }
+  ],
+  "ablation": [
+    {
+      "estimator": "ips[no_cross_fit]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.214916,
+      "rmse_std": 0.042718,
+      "bias_mean": 0.018092,
+      "seed_values": [
+        0.254702,
+        0.220276,
+        0.169771
+      ]
+    },
+    {
+      "estimator": "snips[no_cross_fit]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.136864,
+      "rmse_std": 0.021278,
+      "bias_mean": 0.006023,
+      "seed_values": [
+        0.152135,
+        0.145896,
+        0.11256
+      ]
+    },
+    {
+      "estimator": "dm[no_cross_fit]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.055961,
+      "rmse_std": 0.003383,
+      "bias_mean": 0.03962,
+      "seed_values": [
+        0.05271,
+        0.059462,
+        0.05571
+      ]
+    },
+    {
+      "estimator": "dr[no_cross_fit]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.061725,
+      "rmse_std": 0.006359,
+      "bias_mean": 0.010962,
+      "seed_values": [
+        0.065436,
+        0.065358,
+        0.054382
+      ]
+    },
+    {
+      "estimator": "dr20[no_cross_fit]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.054966,
+      "rmse_std": 0.005029,
+      "bias_mean": 0.023039,
+      "seed_values": [
+        0.056108,
+        0.059325,
+        0.049464
+      ]
+    },
+    {
+      "estimator": "cfdrac[no_cross_fit]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.054966,
+      "rmse_std": 0.005029,
+      "bias_mean": 0.023039,
+      "seed_values": [
+        0.056108,
+        0.059325,
+        0.049464
+      ]
+    },
+    {
+      "estimator": "gated[no_cross_fit]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.135963,
+      "rmse_std": 0.020308,
+      "bias_mean": 0.002366,
+      "seed_values": [
+        0.148943,
+        0.146386,
+        0.11256
+      ]
+    },
+    {
+      "estimator": "ips[no_adaptive_clip]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.214916,
+      "rmse_std": 0.042718,
+      "bias_mean": 0.018092,
+      "seed_values": [
+        0.254702,
+        0.220276,
+        0.169771
+      ]
+    },
+    {
+      "estimator": "snips[no_adaptive_clip]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.136864,
+      "rmse_std": 0.021278,
+      "bias_mean": 0.006023,
+      "seed_values": [
+        0.152135,
+        0.145896,
+        0.11256
+      ]
+    },
+    {
+      "estimator": "dm[no_adaptive_clip]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.055961,
+      "rmse_std": 0.003383,
+      "bias_mean": 0.03962,
+      "seed_values": [
+        0.05271,
+        0.059462,
+        0.05571
+      ]
+    },
+    {
+      "estimator": "dr[no_adaptive_clip]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.06424,
+      "rmse_std": 0.009477,
+      "bias_mean": 0.012528,
+      "seed_values": [
+        0.068119,
+        0.071162,
+        0.053439
+      ]
+    },
+    {
+      "estimator": "dr20[no_adaptive_clip]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.057314,
+      "rmse_std": 0.006429,
+      "bias_mean": 0.024272,
+      "seed_values": [
+        0.05929,
+        0.062523,
+        0.05013
+      ]
+    },
+    {
+      "estimator": "cfdrac[no_adaptive_clip]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.06424,
+      "rmse_std": 0.009477,
+      "bias_mean": 0.012528,
+      "seed_values": [
+        0.068119,
+        0.071162,
+        0.053439
+      ]
+    },
+    {
+      "estimator": "gated[no_adaptive_clip]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.135963,
+      "rmse_std": 0.020308,
+      "bias_mean": 0.002366,
+      "seed_values": [
+        0.148943,
+        0.146386,
+        0.11256
+      ]
+    },
+    {
+      "estimator": "ips[no_gating]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.214916,
+      "rmse_std": 0.042718,
+      "bias_mean": 0.018092,
+      "seed_values": [
+        0.254702,
+        0.220276,
+        0.169771
+      ]
+    },
+    {
+      "estimator": "snips[no_gating]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.136864,
+      "rmse_std": 0.021278,
+      "bias_mean": 0.006023,
+      "seed_values": [
+        0.152135,
+        0.145896,
+        0.11256
+      ]
+    },
+    {
+      "estimator": "dm[no_gating]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.055961,
+      "rmse_std": 0.003383,
+      "bias_mean": 0.03962,
+      "seed_values": [
+        0.05271,
+        0.059462,
+        0.05571
+      ]
+    },
+    {
+      "estimator": "dr[no_gating]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.06424,
+      "rmse_std": 0.009477,
+      "bias_mean": 0.012528,
+      "seed_values": [
+        0.068119,
+        0.071162,
+        0.053439
+      ]
+    },
+    {
+      "estimator": "dr20[no_gating]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.057314,
+      "rmse_std": 0.006429,
+      "bias_mean": 0.024272,
+      "seed_values": [
+        0.05929,
+        0.062523,
+        0.05013
+      ]
+    },
+    {
+      "estimator": "cfdrac[no_gating]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.057314,
+      "rmse_std": 0.006429,
+      "bias_mean": 0.024272,
+      "seed_values": [
+        0.05929,
+        0.062523,
+        0.05013
+      ]
+    },
+    {
+      "estimator": "gated[no_gating]",
+      "dataset": "lin-K5-d10-medium",
+      "rmse_mean": 0.136864,
+      "rmse_std": 0.021278,
+      "bias_mean": 0.006023,
+      "seed_values": [
+        0.152135,
+        0.145896,
+        0.11256
+      ]
+    }
+  ],
+  "failure_cases": [
+    {
+      "case": "IPS variance explosion under low overlap",
+      "dataset": "lin-K5-d10-low",
+      "evidence": "IPS rmse 2.9675 vs 0.1318 at high overlap (+96% worse)",
+      "diagnosis": "importance weights blow up when logging and evaluation policies barely overlap; self-normalization or clipping required"
+    },
+    {
+      "case": "Direct Method bias from nonlinear reward component",
+      "dataset": "lin-K5-d10-low",
+      "evidence": "DM bias_mean=0.0562 (true value excluded from OPE inputs)",
+      "diagnosis": "linear ridge cannot capture the x0*x1 interaction; plug-in estimates inherit model bias"
+    },
+    {
+      "case": "worst estimator ranking",
+      "dataset": "lin-K5-d10-low",
+      "evidence": "ips has the highest rmse 2.9675±1.9260",
+      "diagnosis": "fixed hyperparameter estimators dominate the failure tail; the gated router avoids this tail by construction"
+    }
+  ],
+  "gates": [
+    {
+      "name": "P1_policy_regret_reduction",
+      "passed": true,
+      "detail": "best contextual=linucb regret=180.6±7.4 vs eps_greedy=319.5±26.6; reduction=43.5%, significant=True, threshold>=30%"
+    },
+    {
+      "name": "P2_cfdrac_beats_fixed_dr",
+      "passed": true,
+      "detail": "cfdrac <= dr(tau=inf) on 4/4 specs; significant on 2 specs ['lin-K10-d10-medium', 'lin-K5-d10-low'] (need >= 2)"
+    },
+    {
+      "name": "P3_cfdrac_vs_baselines",
+      "passed": true,
+      "detail": "cfdrac < ips/snips on all 4 specs (True); cfdrac <= min(dr, dr20) on all specs (True); note: DM is reported separately (low-variance plug-in, strongest when n_log is large and the model nearly fits)"
+    }
+  ],
+  "hpo": {
+    "best_alpha": 4.0,
+    "n_trials": 6,
+    "best_dr_value": 1.949437,
+    "all_dr_values": {
+      "0.1": 0.245258,
+      "0.3": 0.71964,
+      "0.5": 1.084568,
+      "1.0": 1.575846,
+      "2.0": 1.857639,
+      "4.0": 1.949437
+    },
+    "distinct_objectives": 6,
+    "verification": {
+      "value_best_alpha": 1.981862,
+      "value_base_alpha": 0.255727
+    },
+    "mabwiser_crosscheck": {
+      "status": "skipped",
+      "reason": "MAB.__init__() got an unexpected keyword argument 'neighborhood'"
+    }
+  },
+  "elapsed_sec": 30.37
+}

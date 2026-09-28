@@ -1,0 +1,31 @@
+[project]
+name = "banditforge"
+version = "0.1.0"
+description = "Modular contextual bandit + off-policy evaluation (OPE) system"
+authors = [{ name = "晨星" }]
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.14",
+    "scikit-learn>=1.5",
+    "optuna>=4.0",
+]
+
+[project.optional-dependencies]
+sota = ["mabwiser>=2.7", "obp>=0.5"]
+dev = ["pytest>=8.0", "pytest-cov", "ruff>=0.6"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "RUF"]
+ignore = [
+    "UP006", "UP035", "UP045", "UP037", "RUF013", "RUF059",  # keep typing.List/Dict style
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
