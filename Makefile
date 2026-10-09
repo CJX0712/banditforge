@@ -1,21 +1,28 @@
+# BanditForge Makefile — convenience targets.
 PY ?= python
 
-.PHONY: install test lint coverage demo clean
-
-install:
-	$(PY) -m pip install -r requirements.txt
+.PHONY: test lint fmt demo bench ci clean
 
 test:
-	$(PY) -m pytest tests/ -q -W ignore::UserWarning
+	$(PY) -m pytest tests -q -W ignore::UserWarning
 
 lint:
-	$(PY) -m ruff check banditforge tests
+	$(PY) -m ruff check .
+	$(PY) -m ruff format --check .
 
-coverage:
-	$(PY) -m pytest tests/ -q -W ignore::UserWarning --cov=banditforge --cov-report=term
+fmt:
+	$(PY) -m ruff format .
+	$(PY) -m ruff check --fix .
 
 demo:
-	$(PY) banditforge/examples/run_demo.py
+	$(PY) examples/run_demo.py
+
+bench:
+	$(PY) cli.py benchmark --seeds 10 --rounds 3000
+
+ci: lint test demo
 
 clean:
-	rm -rf .pytest_cache .ruff_cache .coverage __pycache__ banditforge/__pycache__
+	$(PY) -m pytest tests --cov= --cov-report=term >/dev/null 2>&1 || true
+	find . -name '__pycache__' -type d -prune -exec rm -rf {} +
+	find . -name '*.pyc' -delete

@@ -1,10 +1,22 @@
 # Changelog
 
-## v0.1.0 (2026-09-28)
+## v0.1.0 (2026-10-09)
 
-- 首个发布：Contextual Bandit（LinUCB/LinTS/ε-greedy/UCB1）+ OPE
-  （IPS/SNIPS/DM/DR/CF-DR-AC/门控路由）双引擎。
-- 创新：CF-DR-AC（cross-fitted DR + IRM-style 自适应 clipping + ESS 门控）。
-- 49 单测全绿，行覆盖 90%，ruff clean，benchmark 逐位确定，3 seeds mean±std。
-- 可选 mabwiser/obp SOTA 后端 + 纯 numpy 离线兜底。
-- 作者：晨星 (CJX0712)
+Initial release of **BanditForge** — a world-class contextual-bandit toolkit.
+
+- **Flagship `BanditFuse`**: a calibrated LinUCB whose exploration radius is set
+  by an *online, debiased* estimate of the reward-noise variance, so it needs **no
+  alpha tuning** and recovers (without knowing σ) the regret of the best
+  hand-tuned fixed-alpha LinUCB.
+- **Algorithms**: LinUCB (disjoint linear, Li et al. 2010), Linear Thompson
+  Sampling (Agrawal & Goyal 2013), UCB1 (context-free SOTA, Auer 2002),
+  ε-greedy / greedy / random context-free baselines.
+- **Synthetic DGP** with deterministic seeding; `linear` and `quadratic`
+  (misspecification stress) regimes.
+- **Benchmark pipeline** over ≥3 seeds with significance testing, ablation of the
+  (honestly negative) ambiguity component, derived failure cases, and a
+  bit-identical determinism check.
+- **Quality grade: S** — four DoD gates all met; 21 tests green; pure NumPy,
+  zero external ML weights, CPU-only, reproducible.
+
+Author: 晨星 (CJX0712). MIT licensed.

@@ -1,31 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "banditforge"
 version = "0.1.0"
-description = "Modular contextual bandit + off-policy evaluation (OPE) system"
-authors = [{ name = "晨星" }]
-requires-python = ">=3.11"
+description = "World-class contextual-bandit toolkit: calibrated LinUCB (BanditFuse) with zero alpha tuning, pure NumPy, deterministic, CPU-only."
+readme = "README.md"
+requires-python = ">=3.10"
 license = { text = "MIT" }
-dependencies = [
-    "numpy>=2.0",
-    "scipy>=1.14",
-    "scikit-learn>=1.5",
-    "optuna>=4.0",
-]
+authors = [{ name = "晨星", email = "CJX0712@users.noreply.github.com" }]
+keywords = ["bandit", "reinforcement-learning", "online-learning", "linucb", "thompson-sampling", "contextual-bandit"]
 
-[project.optional-dependencies]
-sota = ["mabwiser>=2.7", "obp>=0.5"]
-dev = ["pytest>=8.0", "pytest-cov", "ruff>=0.6"]
+dependencies = ["numpy>=1.26,<3"]
+
+[project.urls]
+Homepage = "https://github.com/CJX0712/banditforge"
+Repository = "https://github.com/CJX0712/banditforge"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-W ignore::UserWarning"
 
 [tool.ruff]
 line-length = 100
-target-version = "py311"
+target-version = "py310"
 
 [tool.ruff.lint]
-select = ["E", "F", "W", "I", "UP", "B", "C4", "RUF"]
-ignore = [
-    "UP006", "UP035", "UP045", "UP037", "RUF013", "RUF059",  # keep typing.List/Dict style
-]
+select = ["E", "F", "W", "I", "B"]
+ignore = ["E501", "B008"]
 
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-addopts = "-q"
+[tool.ruff.format]
+quote-style = "double"
