@@ -104,6 +104,23 @@ CLI 子命令：`benchmark` / `simulate` / `selftest`。
 
 ---
 
+## 📦 合并仓库说明（保留旧 OPE 子系统）
+
+本仓库在既有 **BanditForge（离策略评估 OPE）** 基础上合并了本次新增的
+**BanditFuse（在线去偏校准）** 子系统，二者命名空间隔离、互不冲突：
+
+| 子系统 | 路径 | 说明 |
+|--------|------|------|
+| **BanditFuse（本次新增，主系统）** | 根 `core/` `bandit/` `eval/` `pipeline/` `cli.py` | 在线上下文老虎机 + 去偏方差校准旗舰 |
+| 留存的 OPE（CF-DR-AC，旧系统） | `banditforge/` 包（`ope/` `hpo/` `data/` `bandits/` `eval/` `pipeline/` `core/`） | 离策略评估、mabwiser 适配、HPO、合成数据 |
+
+- 旧 OPE 系统的**源码已完整保留**（`banditforge/` 包），可单独安装 `mabwiser` 后运行。
+- 本次仅用 BanditFuse 接管了根级 `README` / `docs` / CI / `pyproject` / 根 `tests`（21 项全绿）；
+  旧 OPE 自身的测试未并入当前 CI（依赖外部 `mabwiser`，可在原环境运行）。
+- 历史 `v0.1.0` Release 仍指向旧 OPE 系统；本次发布为 **`v0.2.0`**（BanditFuse）。
+
+---
+
 ## 📁 架构
 
 固定单向无环骨架：`core → {bandit, eval, pipeline} → core`。详见
